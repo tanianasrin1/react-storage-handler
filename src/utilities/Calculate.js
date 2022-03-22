@@ -18,4 +18,10 @@ const multiply = (first, second) =>{
     return first *second;
 }
 
-export {add, multiply, div, substra}
+const getTotalPrice = product => {
+    const reducer = (previous, current) => previous + current.price
+    const total = product.reduce (reducer, 0)
+    return total
+}
+
+export {add, multiply, div, substra, getTotalPrice as getTotal}
